@@ -134,7 +134,25 @@ for (let i = 0; i < formInputs.length; i++) {
     });
 }
 
-
+//dark-light theme
+<script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        var dark = document.getElementById("dark");
+    dark.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        dark.src="./assets/images/sun.png";
+    }
+    else{
+        dark.src="./assets/images/moon.png";
+    }
+}
+            AOS.init({
+       offset:280,
+       duration:2000
+    })
+    </script>
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
